@@ -1,0 +1,67 @@
+.wave-animation {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wave-group {
+  animation: waveHorizontalVertical 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Combined horizontal and vertical wave motion */
+@keyframes waveHorizontalVertical {
+  0% {
+    transform: translateX(0) scaleY(1) scaleX(1) skewX(0deg);
+  }
+  25% {
+    transform: translateX(20px) scaleY(1.08) scaleX(0.98) skewX(2deg);
+  }
+  50% {
+    transform: translateX(0) scaleY(0.92) scaleX(1.02) skewX(0deg);
+  }
+  75% {
+    transform: translateX(-20px) scaleY(1.08) scaleX(0.98) skewX(-2deg);
+  }
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1) skewX(0deg);
+  }
+}
+
+/* Alternative: More dynamic wave with both motions */
+@keyframes waveDynamicMotion {
+  0% {
+    transform: translateX(0) translateY(0) scaleY(1);
+  }
+  25% {
+    transform: translateX(25px) translateY(-10px) scaleY(1.1);
+  }
+  50% {
+    transform: translateX(0) translateY(0) scaleY(0.9);
+  }
+  75% {
+    transform: translateX(-25px) translateY(10px) scaleY(1.1);
+  }
+  100% {
+    transform: translateX(0) translateY(0) scaleY(1);
+  }
+}
+
+/* Alternative: Wave ripple with horizontal flow */
+@keyframes waveRippleFlow {
+  0% {
+    transform: translateX(0) scaleY(1) skewX(0) skewY(0);
+  }
+  25% {
+    transform: translateX(20px) scaleY(1.12) skewX(3deg) skewY(2deg);
+  }
+  50% {
+    transform: translateX(0) scaleY(0.88) skewX(0) skewY(0);
+  }
+  75% {
+    transform: translateX(-20px) scaleY(1.12) skewX(-3deg) skewY(-2deg);
+  }
+  100% {
+    transform: translateX(0) scaleY(1) skewX(0) skewY(0);
+  }
+}

@@ -1,0 +1,53 @@
+.orb-wrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #3e93fe,#64a6f8,#9fcafd,#ffffff, #ffffff, transparent);
+  width: 160px;
+  height: 160px;
+  left: 20%;
+  bottom: 20%;
+  animation: float 4s infinite;
+  z-index: -1;
+  will-change: transform;
+  transform: translateZ(0);
+}
+.orb.small {
+  width: 80px;
+  height: 80px;
+  left: 70%;
+  top: 60%;
+  animation-duration: 5s;
+}
+.orb.med {
+  width: 120px;
+  height: 120px;
+  left: 50%;
+  top: 10%;
+  animation-duration: 5s;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* #parallax {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.layer {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #7fb9ff, transparent);
+} */

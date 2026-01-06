@@ -1,0 +1,102 @@
+/* ===== ANIMATED BUTTON STYLES ===== */
+
+.animated-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  text-decoration: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Prevent animation on reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animated-btn {
+    transition: none;
+  }
+}
+
+/* Primary Variant */
+.animated-btn--primary {
+  background: linear-gradient(135deg, #3e93fe, #96bae6);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(62, 147, 254, 0.3);
+}
+
+.animated-btn--primary:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(62, 147, 254, 0.4);
+}
+
+.animated-btn--primary:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+/* Secondary Variant */
+.animated-btn--secondary {
+  background: transparent;
+  color: #3e93fe;
+  border: 2px solid #3e93fe;
+}
+
+.animated-btn--secondary:hover:not(:disabled) {
+  background: rgba(62, 147, 254, 0.1);
+  box-shadow: 0 4px 15px rgba(62, 147, 254, 0.2);
+}
+
+/* Magnetic Variant */
+.animated-btn--magnetic {
+  background: linear-gradient(135deg, #3e93fe, #96bae6);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(62, 147, 254, 0.3);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.animated-btn--magnetic:hover:not(:disabled) {
+  box-shadow: 0 12px 30px rgba(62, 147, 254, 0.4);
+}
+
+/* Disabled State */
+.animated-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Ripple Effect */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(0);
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* Button Text */
+.btn-text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: inherit;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .animated-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

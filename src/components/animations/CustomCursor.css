@@ -1,0 +1,66 @@
+/* ===== CUSTOM CURSOR ===== */
+
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+/* Inner dot */
+.cursor-inner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #3e93fe;
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  transform: translate(-50%, -50%);
+  left: 0;
+  top: 0;
+  z-index: 2;
+  will-change: transform;
+}
+
+/* Outer ring */
+.cursor-outer {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(62, 147, 254, 0.6);
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  transform: translate(-50%, -50%);
+  left: 0;
+  top: 0;
+  z-index: 1;
+  will-change: transform;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor {
+    display: none;
+  }
+}
+
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Show default cursor for non-hover devices */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+
+  body {
+    cursor: auto;
+  }
+}

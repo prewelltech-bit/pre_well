@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "role":"Graphic Designer",
+    "Graphic": [
+      {
+        "id": 1,
+        "name": "Jatan Sholanki",
+        "role": "Lead Graphic Designer"
+      },
+      {
+        "id": 2,
+        "name":"Sarika",
+        "role": "Graphic Designer"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "role":"Video Editor",
+    "Video": [
+      {
+        "id": 1,
+        "name": "Ghulab",
+        "role": "Lead Video Editor"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "role":"Content Writer",
+    "Content": [
+      {
+        "id": 1,
+        "name": "pritesha",
+        "role": "Content Writer"
+      },
+      {
+        "id": 2,
+        "name": "Krisha",
+        "role": "Content Writer"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "role":"Developer",
+    "Developer": [
+      {
+        "id": 1,
+        "name": "Mitanshi",
+        "role": "Lead Web Developer"
+      },
+      {
+        "id": 2,
+        "name": "Bhavya Chevli",
+        "role": "Web Developer"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "role":"Photographer",
+    "PhotoGrapher": [
+      {
+        "id": 1,
+        "name": "Dharmesh Givani",
+        "role": "Photographer of Eden Clicks"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "role":"S.E.O",
+    "Seo": [
+      {
+        "id": 1,
+        "name": "Rahul",
+        "role": "S.E.O Expert"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "role":"Add manager",
+    "PhotoGrapher": [
+      {
+        "id": 1,
+        "name": "Yash",
+        "role": "Advertisment Manager"
+      }
+    ]
+  }
+]

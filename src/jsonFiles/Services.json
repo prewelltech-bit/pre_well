@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Digital Marketing",
+    "desc": "Data-driven strategies focused on visibility, lead generation, and measurable business growth through SEO and paid campaigns.",
+    "icon": "📈",
+    "category": "Marketing",
+    "details": "Comprehensive digital marketing strategies that drive measurable results. From SEO optimization to paid advertising campaigns, we help your business reach the right audience.",
+    "features": ["SEO Optimization", "Paid Ads", "Analytics", "Lead Generation"],
+    "clients": "500+",
+    "success": "95%"
+  },
+  {
+    "id": 2,
+    "title": "Social Media Management",
+    "desc": "Creative content and targeted campaigns to grow engagement, brand awareness, and conversions across platforms.",
+    "icon": "📱",
+    "category": "Marketing",
+    "details": "Strategic social media management that builds your brand and engages your audience. We create compelling content across all major platforms.",
+    "features": ["Content Creation", "Community Management", "Engagement Strategy", "Analytics"],
+    "clients": "450+",
+    "success": "92%"
+  },
+  {
+    "id": 3,
+    "title": "Graphic Design",
+    "desc": "High-quality visuals, branding, and creatives that communicate clearly and attract attention.",
+    "icon": "🎨",
+    "category": "Design",
+    "details": "Professional graphic design services that bring your brand vision to life. Custom designs for all your marketing and branding needs.",
+    "features": ["Logo Design", "Branding", "Marketing Materials", "Social Graphics"],
+    "clients": "600+",
+    "success": "98%"
+  },
+  {
+    "id": 4,
+    "title": "Web Development",
+    "desc": "Fast, responsive, and scalable websites built with modern technologies like React.",
+    "icon": "💻",
+    "category": "Development",
+    "details": "Custom web development using cutting-edge technologies. We build responsive, fast-loading websites that convert visitors into customers.",
+    "features": ["Responsive Design", "Fast Performance", "SEO Ready", "Security"],
+    "clients": "350+",
+    "success": "96%"
+  },
+  {
+    "id": 5,
+    "title": "IT Solutions",
+    "desc": "Reliable IT services including automation, integrations, and technical support for business growth.",
+    "icon": "⚙️",
+    "category": "Technology",
+    "details": "Enterprise IT solutions that streamline your operations. From infrastructure management to technical support, we've got you covered.",
+    "features": ["Infrastructure", "Automation", "Support", "Integration"],
+    "clients": "400+",
+    "suc    cess": "97%"
+  },
+  {
+         "id": 6,
+    "title": "Mobile App Development",
+    "desc": "Native and cross-platform mobile apps that deliver exceptional user experience on iOS and Android.",
+    "icon": "📲",
+    "category": "Development",
+    "details": "Professional mobile app development for iOS and Android. We create user-centric apps that solve real business problems.",
+    "features": ["iOS Apps", "Android Apps", "Cross-Platform", "UX Design"],
+    "clients": "280+",
+    "success": "99%"
+  },
+  {
+    "id": 7,
+    "title": "E-Commerce Solutions",
+    "desc": "Complete e-commerce platforms with payment integration, inventory management, and conversion optimization.",
+    "icon": "🛒",
+    "category": "Development",
+    "details": "Full-featured e-commerce solutions that boost your online sales. Integrated with payment gateways and inventory management.",
+    "features": ["Store Setup", "Payment Integration", "Inventory", "Analytics"],
+    "clients": "320+",
+    "success": "94%"
+  },
+  {
+    "id": 8,
+    "title": "Brand Consulting",
+    "desc": "Strategic brand development and positioning to establish strong market presence and customer loyalty.",
+    "icon": "🎯",
+    "category": "Strategy",
+    "details": "Strategic brand consulting to establish your market position. We help you build a brand that resonates with your audience.",
+    "features": ["Brand Strategy", "Positioning", "Messaging", "Identity"],
+    "clients": "250+",
+    "success": "93%"
+  }
+]

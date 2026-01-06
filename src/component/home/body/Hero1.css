@@ -1,0 +1,125 @@
+/* .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #007bff;
+}
+
+.typewriter {
+  font-size: 2rem;
+  color: #0056b3;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.hero-buttons .btn-primary {
+  background: #007bff;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.hero-buttons .btn-secondary {
+  background: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+} */
+.hero1 {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* background: url(../../assets/images/img-cheeta.png)
+    no-repeat center center / cover; */
+}
+
+.hero1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh; /* adjust as needed */
+  /* padding: 2rem 1rem; */
+  background-size: cover;
+  /* background: url(../../assets/images/img-cheeta.png); */
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+/* Body text and layout */
+.hero1 .max-w-2xl {
+  max-width: 42rem;
+}
+
+/* CTA buttons */
+.hero-cta-btn1 {
+  background: #3e93fe; 
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.15s ease, background 0.15s ease;
+  display: inline-block;
+}
+.hero-cta-btn1:hover {
+  transform: translateY(-3px);
+}
+
+/* Make sure any images inside scale properly */
+.hero1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive tweaks */
+@media (max-width: 639px) {
+  .hero1 {
+    min-height: 60vh;
+    padding: 1.5rem 1rem;
+  }
+  .hero1 h1 {
+    font-size: 1.4rem;
+  }
+  .hero-cta-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hero1 {
+    min-height: 65vh;
+    padding: 2rem 2rem;
+  }
+  .hero-cta-btn {
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero1 {
+    min-height: 75vh;
+    padding: 3rem 4rem;
+  }
+}
