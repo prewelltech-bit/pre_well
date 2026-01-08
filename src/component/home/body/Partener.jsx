@@ -25,16 +25,12 @@ export default function Partener() {
       </h2>
 
       <Swiper
-        modules={[Autoplay]}
+        modules={[]}
         spaceBetween={40}
         slidesPerView={2}
         loop={true}
-        speed={4000}
-        autoplay={{
-          delay: 0,
-          disableOnInteraction: false,
-        }}
-        simulateTouch={true}
+        speed={2000}
+        // simulateTouch={true}
         breakpoints={{
           640: { slidesPerView: 3 },
           768: { slidesPerView: 4 },

@@ -7,6 +7,7 @@ import Testimonials from "./body/Testimonials";
 import Contact from "./body/Contact";
 import WhyChose from "./body/WhyChose";
 import Partener from "./body/Partener";
+import WhoWeServe from "./body/WhoWeServe";
 
 
 const Body = () => {
@@ -33,6 +34,7 @@ const Body = () => {
         {/* New Sections */}
         <Partener />
         <Testimonials />
+        <WhoWeServe />
         <Contact />
         <WhyChose />
     </>

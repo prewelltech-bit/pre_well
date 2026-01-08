@@ -40,10 +40,9 @@ const OurTeamBody = () => {
                             src="/assets/images/person.jpg"
                             alt={person.name}
                             className="team-member-photo"
-                            />
+                          />
                         </div>
                         <h2 className="team-member-name">{person.name}</h2>
-                        <p className="team-member-role">{person.role}</p>
                         <p className="team-member-role">{person.role}</p>
                       </div>
                     ))}

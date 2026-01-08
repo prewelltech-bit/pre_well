@@ -8,7 +8,7 @@ import OurTeamSection from './OurTeamSection'
 const OurTeam = () => {
   return (
     <>
-      <div >
+      <div className='OurTeam-main'>
         <Header />
         <OurTeamSection />
         <Footer />
