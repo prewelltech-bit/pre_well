@@ -20,9 +20,9 @@ const Vision = () => {
                         Our Mission
                     </h2>
                     <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
-                        to deliver complete end to end digital solutions from one place, combining stategy , creativity , and design to help brands/businesses to build strong and stand out to grow in today's competitive digital world.
-                    <Flame className='h-10'/>
+                        to deliver complete end to end digital solutions from one place, combining strategy, creativity, and design to help brands/businesses to build strong and stand out to grow in today's competitive digital world.
                     </p>
+                    <Flame className='h-10' />
                 </div>
             </div>
         </>
