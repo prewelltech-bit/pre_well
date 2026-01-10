@@ -1,14 +1,14 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import HeroSection from "./body/HeroSection";
-import FloatingAnimation from "./body/FloatingAnimation";
 import OurServices from "./body/OurServices";
 import Hero1 from "./body/Hero1";
-import Testimonials from "./body/Testimonials";
-import Contact from "./body/Contact";
-import WhyChose from "./body/WhyChose";
-import Partener from "./body/Partener";
-import WhoWeServe from "./body/WhoWeServe";
 
+// Lazy load below-the-fold components for better performance
+const Testimonials = lazy(() => import("./body/Testimonials"));
+const Contact = lazy(() => import("./body/Contact"));
+const WhyChose = lazy(() => import("./body/WhyChose"));
+const Partener = lazy(() => import("./body/Partener"));
+const WhoWeServe = lazy(() => import("./body/WhoWeServe"));
 
 const Body = () => {
   return (
@@ -17,28 +17,19 @@ const Body = () => {
           <div>
             <Hero1 />
             <HeroSection />
-            {/* <FloatingAnimation /> */}
             <OurServices />
           </div>
-          {/* <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">
-            Welcome to Prewell Digitech 
-          </h2>
-          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-            Prewell Digitech is a leading technology solutions provider,
-            specializing in innovative software development, IT consulting, and
-            digital transformation services. Our mission is to empower
-            businesses with cutting-edge technology to drive growth and
-            efficiency.
-          </p> */}
         </div>
-        {/* New Sections */}
-        <Partener />
-        <Testimonials />
-        <WhoWeServe />
-        <Contact />
-        <WhyChose />
+        {/* New Sections - Lazy loaded */}
+        <Suspense fallback={<div style={{ minHeight: '200px' }} />}>
+          <Partener />
+          <Testimonials />
+          <WhoWeServe />
+          <Contact />
+          <WhyChose />
+        </Suspense>
     </>
   );
 };
 
-export default Body;
+export default React.memo(Body);

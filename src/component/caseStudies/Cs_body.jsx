@@ -145,9 +145,9 @@ const Cs_body = () => {
   return (
     <>
       <section className="services-section">
-        <div className="services-container">
+        <div className="services-container px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-24 mx-auto">
           <Reveal direction="up" className="services-header">
-            <h2>Our Case Studies</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 md:mb-6 gradient-text">Portfolio</h2>
             <h4>
               <p>Real work. Real impact. Real growth.</p>
             </h4>
@@ -214,7 +214,7 @@ const Cs_body = () => {
                 </div>
 
                 {/* Expanded Details */}
-                {expandedId === CaseStudies.id && (
+                {/* {expandedId === CaseStudies.id && (
                   <div className="service-details-expanded">
                     <p className="details-text">{CaseStudies.details}</p>
 
@@ -232,7 +232,7 @@ const Cs_body = () => {
 
                     <button className="service-cta">Get Started Today</button>
                   </div>
-                )}
+                )} */}
               </div>
             ))}
           </Reveal>

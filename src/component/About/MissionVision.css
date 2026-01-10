@@ -1,0 +1,175 @@
+/* ===== MAIN WRAPPER ========== */
+
+
+.mv-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 24px;              /* always side space */
+  box-sizing: border-box;
+}
+
+/* ===== ROW =================== */
+
+
+.mv-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 1100px;                /* key for side gap */
+  margin: 0 auto 140px;
+  box-sizing: border-box;
+}
+
+/* Reverse row */
+.mv-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ===== IMAGE BOX ============== */
+
+
+.mv-image-box {
+  position: relative;
+  flex: 0 0 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.mv-image-box img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 18px;
+  position: relative;
+  z-index: 2;
+  object-fit: cover;
+}
+
+/* Background card */
+.mv-bg {
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  background: url(https://res.cloudinary.com/skyllect/image/upload/v1710236685/about-us/about-five.webp)
+    center / cover no-repeat;
+  border-radius: 22px;
+  top: 30px;
+  left: -30px;
+  z-index: 1;
+}
+
+.vision-bg {
+  left: auto;
+  right: -30px;
+  background: url(https://res.cloudinary.com/skyllect/image/upload/v1710236684/about-us/about-fix.webp)
+    center / cover no-repeat;
+}
+
+/* ===== CONTENT =============== */
+
+.mv-content {
+  flex: 0 0 50%;
+}
+
+
+/* ===== RESPONSIVE ============ */
+
+/* 🔹 1024px */
+@media (max-width: 1024px) {
+  .mv-wrapper {
+    padding: 100px 32px;
+  }
+
+  .mv-row {
+    gap: 60px;
+    margin-bottom: 110px;
+  }
+
+  .mv-content h2 {
+    font-size: 34px;
+  }
+}
+
+/* 🔹 768px */
+@media (max-width: 768px) {
+  .mv-wrapper {
+    padding: 90px 28px;
+  }
+
+  .mv-row,
+  .mv-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mv-row {
+    gap: 40px;
+    margin-bottom: 100px;
+  }
+
+  .mv-image-box {
+    margin-bottom: 30px;
+  }
+
+  .mv-image-box img {
+    max-width: 360px;
+  }
+
+  .mv-bg {
+    display: none;
+  }
+
+  .mv-content {
+    flex: 100%;
+  }
+
+  .mv-content h2 {
+    font-size: 30px;
+  }
+
+  .mv-content p {
+    text-align: left;
+  }
+}
+
+/* 🔹 640px */
+@media (max-width: 640px) {
+  .mv-wrapper {
+    padding: 80px 22px;
+  }
+
+  .mv-row {
+    gap: 36px;
+    margin-bottom: 80px;
+  }
+
+  .mv-content h2 {
+    font-size: 26px;
+  }
+
+  .mv-content p {
+    font-size: 15px;
+  }
+}
+
+/* 🔹 280px (very small devices) */
+@media (max-width: 280px) {
+  .mv-wrapper {
+    padding: 60px 16px;
+  }
+
+  .mv-image-box img {
+    max-width: 220px;
+  }
+
+  .mv-content h2 {
+    font-size: 22px;
+  }
+
+  .mv-content p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}

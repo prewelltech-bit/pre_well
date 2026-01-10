@@ -42,7 +42,7 @@ const Contact = () => {
 
   return (
     <section className="contact-section animate-on-scroll w-full">
-      <div className="contact-container">
+      <div className="contact-container px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-24 mx-auto">
         <div className="contact-header animate-on-scroll delay-1">
           <h2>Get In Touch</h2>
           <p>Let's discuss your next project and how we can help</p>

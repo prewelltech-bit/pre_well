@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
-
 /**
  * Reveal Component
  * 
@@ -41,70 +39,93 @@ const Reveal = ({
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Determine initial transform based on direction
-    const getInitialTransform = () => {
-      switch (direction) {
-        case 'up':
-          return { y: 100, opacity: 0 };
-        case 'down':
-          return { y: -100, opacity: 0 };
-        case 'left':
-          return { x: 100, opacity: 0 };
-        case 'right':
-          return { x: -100, opacity: 0 };
-        default:
-          return { y: 100, opacity: 0 };
+    // Small delay to ensure DOM is ready and ScrollTrigger is initialized
+    const initTimer = setTimeout(() => {
+      // Determine initial transform based on direction
+      const getInitialTransform = () => {
+        switch (direction) {
+          case 'up':
+            return { y: 100, opacity: 0 };
+          case 'down':
+            return { y: -100, opacity: 0 };
+          case 'left':
+            return { x: 100, opacity: 0 };
+          case 'right':
+            return { x: -100, opacity: 0 };
+          default:
+            return { y: 100, opacity: 0 };
+        }
+      };
+
+      const initialTransform = getInitialTransform();
+      const triggers = [];
+
+      if (stagger && childrenRefs.current.length > 0) {
+        // Set initial state for children
+        childrenRefs.current.forEach((child) => {
+          if (child) {
+            gsap.set(child, initialTransform);
+          }
+        });
+
+        // Animate children with stagger
+        const animation = gsap.to(childrenRefs.current, {
+          opacity: 1,
+          x: direction === 'left' || direction === 'right' ? 0 : undefined,
+          y: direction === 'up' || direction === 'down' ? 0 : undefined,
+          duration,
+          delay,
+          stagger: staggerDelay,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top 80%',
+            once: true,
+            markers: false,
+          },
+        });
+        triggers.push(animation.scrollTrigger);
+      } else {
+        // Set initial state for container
+        gsap.set(containerRef.current, initialTransform);
+
+        // Animate container
+        const animation = gsap.to(containerRef.current, {
+          opacity: 1,
+          x: direction === 'left' || direction === 'right' ? 0 : undefined,
+          y: direction === 'up' || direction === 'down' ? 0 : undefined,
+          duration,
+          delay,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top 80%',
+            once: true,
+            markers: false,
+          },
+        });
+        triggers.push(animation.scrollTrigger);
       }
-    };
 
-    const initialTransform = getInitialTransform();
-
-    if (stagger && childrenRefs.current.length > 0) {
-      // Animate children with stagger
-      gsap.to(childrenRefs.current, {
-        opacity: 1,
-        x: direction === 'left' || direction === 'right' ? 0 : undefined,
-        y: direction === 'up' || direction === 'down' ? 0 : undefined,
-        duration,
-        delay,
-        stagger: staggerDelay,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top 80%',
-          once: true,
-          markers: false,
-        },
-      });
-    } else {
-      // Animate container
-      gsap.to(containerRef.current, {
-        opacity: 1,
-        x: direction === 'left' || direction === 'right' ? 0 : undefined,
-        y: direction === 'up' || direction === 'down' ? 0 : undefined,
-        duration,
-        delay,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top 80%',
-          once: true,
-          markers: false,
-        },
-      });
-    }
-
-    // Set initial state
-    if (stagger && childrenRefs.current.length > 0) {
-      childrenRefs.current.forEach((child) => {
-        gsap.set(child, initialTransform);
-      });
-    } else {
-      gsap.set(containerRef.current, initialTransform);
-    }
+      // Refresh ScrollTrigger after setup
+      ScrollTrigger.refresh();
+    }, 50);
 
     return () => {
-      // Cleanup
+      clearTimeout(initTimer);
+      // Cleanup ScrollTrigger instances
+      ScrollTrigger.getAll().forEach((trigger) => {
+        if (trigger.vars && trigger.vars.trigger === containerRef.current) {
+          trigger.kill();
+        }
+        if (stagger && childrenRefs.current.length > 0) {
+          childrenRefs.current.forEach((child) => {
+            if (child && trigger.vars && trigger.vars.trigger === child) {
+              trigger.kill();
+            }
+          });
+        }
+      });
     };
   }, [direction, delay, duration, stagger, staggerDelay]);
 

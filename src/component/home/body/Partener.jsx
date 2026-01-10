@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -14,37 +13,45 @@ const clients = [
   "/assets/logos/client-7.jpg",
   "/assets/logos/client-8.png",
   "/assets/logos/client-9.png",
-  // "/assets/logos/client-5.png",
 ];
 
-export default function Partener() {
+export default function Partner() {
+  const swiperRef = useRef(null);
+
   return (
-    <div className="w-full py-12 bg-white">
-      <h2 className="text-center text-2xl mb-8 font-bold mb-4 gradient-text">
+    <div className="w-full py-12 bg-white overflow-hidden">
+      <h2 className="text-center text-2xl mb-10 font-bold text-gray-800">
         Trusted by Our Clients
       </h2>
 
       <Swiper
-        modules={[]}
-        spaceBetween={40}
+        modules={[Autoplay]}
+        spaceBetween={30}
         slidesPerView={2}
         loop={true}
-        speed={2000}
-        // simulateTouch={true}
+        speed={3000}   // Reduced for performance
+        autoplay={{
+          delay: 1500, // NOT 0
+          disableOnInteraction: false,
+        }}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
         breakpoints={{
           640: { slidesPerView: 3 },
           768: { slidesPerView: 4 },
-          1024: { slidesPerView: 5 },
+          1024: { slidesPerView: 6 },
         }}
-        className="max-w-6xl mx-auto"
+        className="max-w-7xl mx-auto"
       >
         {clients.map((logo, index) => (
           <SwiperSlide key={index}>
             <div className="flex items-center justify-center">
               <img
                 src={logo}
-                alt="client logo"
-                className="h-16 object-contain  hover:grayscale-0 transition duration-300"
+                alt={`Client ${index + 1}`}
+                className="h-12 md:h-16 w-auto object-contain"
+                loading="lazy"   // IMPORTANT
+                decoding="async"
+                onError={(e) => (e.target.style.display = "none")}
               />
             </div>
           </SwiperSlide>
@@ -53,4 +60,3 @@ export default function Partener() {
     </div>
   );
 }
-

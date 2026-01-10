@@ -11,13 +11,8 @@ const Header = () => {
         <div className="header-top">
           {/* Logo Section with hover glow */}
           <div className="logo-section w-32 sm:w-36 md:w-40 lg:w-48">
-            <img
-              src="/assets/images/Prewell-Digitech-logo.png"
-              alt="Prewell Digitech Logo"
-              className="logo-img"
-            />
+            <Link to="/"><img src="/assets/images/Prewell-Digitech-logo.png" alt="Prewell Digitech Logo" className="logo-img" /></Link>
           </div>
-
           {/* Search Bar - Hidden on mobile */}
           {/* <div className="search-bar-wrapper">
             <div className="search-container">
@@ -63,12 +58,16 @@ const Header = () => {
                   <span className="text-blue-800 font-weight-l text-lg link">Our Team</span>
                   <span className="nav-underline"></span>
                 </Link>
+                <Link to="/gallery" className="nav-link">
+                  <span className="text-blue-800 font-weight-l text-lg link">Gallary</span>
+                  <span className="nav-underline"></span>
+                </Link>
               </nav>
             </div>
 
             {/* Icons Section */}
             <div className="icons-section">
-              <button
+              {/* <button
                 className="icon-btn notification-btn"
                 aria-label="Notifications"
               >
@@ -84,7 +83,7 @@ const Header = () => {
                   <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                 </svg>
                 <span className="notification-dot"></span>
-              </button>
+              </button> */}
 
               {/* <div className="profile-circle">
                 <button className="profile-btn" aria-label="Profile">

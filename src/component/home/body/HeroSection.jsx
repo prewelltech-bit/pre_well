@@ -32,7 +32,8 @@ const HeroSection = () => {
               src={heroImg}
               alt="Hero Image"
               className="rounded-xl w-full h-[75%] object-cover hover-scale transition-transform"
-              loading="lazy"
+              loading="eager"
+              fetchPriority="high"
             />
           </Reveal>
         </Reveal>

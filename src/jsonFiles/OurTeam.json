@@ -1,6 +1,16 @@
 
 [
   {
+    "name": "Rahul",
+    "role": "S.E.O Expert",
+    "img": "/assets/images/men.png"
+  },
+  {
+    "name": "Yash",
+    "role": "Advertisment Manager",
+    "img": "/assets/images/men.png"
+  },
+  {
     "name": "Jatan Sholanki",
     "role": "Lead Graphic Designer",
     "img": "/assets/images/men.png"
@@ -11,17 +21,22 @@
     "img": "/assets/images/men.png"
   },
   {
+    "name": "Riya Rana",
+    "role": "Graphic Designer",
+    "img": "/assets/images/men.png"
+  },
+  {
     "name": "Ghulab",
     "role": "Lead Video Editor ",
     "img": "/assets/images/men.png"
   },
   {
-    "name": "pritesha",
-    "role": "Content Writer",
+    "name": "Hitesh Lohar",
+    "role": "Video Editor",
     "img": "/assets/images/men.png"
   },
   {
-    "name": "Krisha",
+    "name": "pritesha",
     "role": "Content Writer",
     "img": "/assets/images/men.png"
   },
@@ -38,16 +53,6 @@
   {
     "name": "Dharmesh Givani",
     "role": "Photographer of Eden Clicks",
-    "img": "/assets/images/men.png"
-  },
-  {
-    "name": "Rahul",
-    "role": "S.E.O Expert",
-    "img": "/assets/images/men.png"
-  },
-  {
-    "name": "Yash",
-    "role": "Advertisment Manager",
     "img": "/assets/images/men.png"
   }
 ]

@@ -40,6 +40,8 @@ const OurTeamSection = () => {
                                             src={member.img}
                                             alt={member.name}
                                             className={`member-img ${currentShape}`}
+                                            loading="lazy"
+                                            decoding="async"
                                         />
                                     </div>
                                     <h3 className="name text-lg sm:text-lg md:text-xl lg:text-2xl font-extrabold mb-3 sm:mb-4 md:mb-6 text-stone-800">{member.name}</h3>

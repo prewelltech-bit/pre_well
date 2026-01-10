@@ -1,24 +1,32 @@
 import React from "react";
 import { AnimatedButton, Reveal } from "../../components/animations";
 import Vision from "./Vision";
-// const AnimationHero = '/assets/images/clear_cinematic_1080p_horizontal.mp4';
+import { color } from "framer-motion";
 
 const AboutBody = () => {
   return (
     <>
       <div className="hero-wrapper">
+        <div className="welcome-text py-12 flex justify-center items-center px-4 sm:px-6 md:px-8">
+          <h2
+            style={{ color: "#2B2B2B"}}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold"
+          >
+            Welcome To{" "}
+            <span
+              style={{ color: "#3e93fe"}}
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold"
+            >
+              PreWell
+            </span>
+          </h2>
+        </div>
         <Reveal direction="left" className="hero-section flex flex-col ">
           <div className="hero-section1 flex flex-col justify-center gap-4 md:gap-6 lg:gap-8 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-8 sm:py-10 md:py-12 lg:py-16">
-          <div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 md:mb-6">
-              <span>Welcome to </span>
-              <span className="text-blue-500 font-bold">PreWell</span>
-            </h1>
-          </div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 md:mb-6 gradient-text">
               Innovating the Future with Technology
             </h1>
-            <p className="text-sm sm:text-base md:text-lg text-gray-200 leading-relaxed max-w-2xl text-gray-950 text-justify ">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl text-gray-950 text-justify">
               Prewell is a globally driven digital solutions company focused on
               helping brands and businesses thrive in the digital world. We
               specialize in building powerful digital experiences that combine

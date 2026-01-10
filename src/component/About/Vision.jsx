@@ -1,32 +1,52 @@
-import React from 'react'
-import { Flame } from './Flame'
+import React from "react";
+import "./MissionVision.css";
 
 const Vision = () => {
-    return (
-        <>
-            <div className="vision-section bg-white py-12 sm:py-16 md:py-20 lg:py-24 flex gap-12">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 text-center">
+  return (
+    <section className="mv-wrapper">
 
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 gradient-text">
-                        Our Vision
-                    </h2>
-                    <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
-                        To be a global leader in digital innovation, empowering businesses to thrive in the digital age through cutting-edge technology and creative solutions.
-                    </p>
-                </div>
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 text-center">
+      {/* Mission */}
+      <div className="mv-row fade-in-left">
+        <div className="mv-image-box">
+          <div className="mv-bg"></div>
+          <img src="https://res.cloudinary.com/skyllect/image/upload/v1710236684/about-us/about-fore.webp" alt="Mission" />
+        </div>
 
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 gradient-text">
-                        Our Mission
-                    </h2>
-                    <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
-                        to deliver complete end to end digital solutions from one place, combining strategy, creativity, and design to help brands/businesses to build strong and stand out to grow in today's competitive digital world.
-                    </p>
-                    <Flame className='h-10' />
-                </div>
-            </div>
-        </>
-    )
-}
+        <div className="mv-content fade-in-up">
+          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 md:mb-6 gradient-text">Our Mission</h1>
+          <p class="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl text-gray-950 text-justify">
+            Our expanding portfolio of services enables us to deliver
+            end-to-end solutions, while our growing technical expertise
+            makes it possible for us to tackle even highly complex projects.
+            By building our presence in different parts of the world,
+            nurturing talent, streamlining our management processes,
+            and staying committed to continuous improvement, we find
+            ways to deliver quality solutions at affordable rates.
+          </p>
+        </div>
+      </div>
 
-export default Vision
+      {/* Vision */}
+      <div className="mv-row reverse fade-in-right">
+                <div className="mv-image-box">
+          <div className="mv-bg vision-bg"></div>
+          <img src="https://res.cloudinary.com/skyllect/image/upload/v1710236687/about-us/about-seven.webp" alt="Vision" />
+        </div>
+        <div className="mv-content fade-in-up">
+          <h1  class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 md:mb-6 gradient-text">Our Vision</h1>
+          <p class="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl text-gray-950 text-justify">
+            To empower our customers to achieve their goals by providing
+            reliable and quality solutions with technology and innovation.
+            To help entrepreneurs and creative thinkers convert their ideas
+            into reality and deliver world-class products and services at
+            competitive rates.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+  );
+};
+
+export default Vision;

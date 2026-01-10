@@ -4,6 +4,7 @@ import Header from '../../Header'
 import Footer from '../../Footer'
 // import CarouselTeam from './CarouselTeam'
 import OurTeamSection from './OurTeamSection'
+import './OurTeam.css'
 
 const OurTeam = () => {
   return (
