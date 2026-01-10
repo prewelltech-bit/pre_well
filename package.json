@@ -55,7 +55,7 @@
   "main": "eslint.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://prewelltech-bit:@github.com/prewelltech-bit/pre_well.git"
+    "url": "git+https://github.com/prewelltech-bit/pre_well.git"
   },
   "keywords": [],
   "author": "",
