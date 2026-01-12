@@ -1,17 +1,17 @@
 import React from "react";
 import Header from "../../Header";
 import Footer from "../../Footer";
-import Cs_body from "./Cs_body";
+import Portfolio_body from "./Portfolio_body";
 
 
-const CaseStudies = () => {
+const Portfolio = () => {
   return (
     <>
         <Header />
-        <Cs_body />
+        <Portfolio_body />
         <Footer />
     </>
   );
 };
 
-export default CaseStudies;
+export default Portfolio;

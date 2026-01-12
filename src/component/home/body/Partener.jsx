@@ -4,15 +4,24 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 const clients = [
-  "/assets/logos/client-1.png",
-  "/assets/logos/client-2.png",
-  "/assets/logos/client-3.png",
-  "/assets/logos/client-4.png",
-  "/assets/logos/client-5.png",
-  "/assets/logos/client-6.png",
-  "/assets/logos/client-7.jpg",
-  "/assets/logos/client-8.png",
-  "/assets/logos/client-9.png",
+  "/assets/logos/client-1.svg",
+  "/assets/logos/client-2.svg",
+  "/assets/logos/client-3.svg",
+  "/assets/logos/client-4.svg",
+  "/assets/logos/client-5.svg",
+  "/assets/logos/client-6.svg",
+  "/assets/logos/client-7.svg",
+  "/assets/logos/client-8.svg",
+  "/assets/logos/client-9.svg",
+  // "/assets/logos/client-10.svg"
+  // "/assets/logos/client-2.png",
+  // "/assets/logos/client-3.png",
+  // "/assets/logos/client-4.png",
+  // "/assets/logos/client-5.png",
+  // "/assets/logos/client-6.png",
+  // "/assets/logos/client-7.jpg",
+  // "/assets/logos/client-8.png",
+  // "/assets/logos/client-9.png",
 ];
 
 export default function Partner() {

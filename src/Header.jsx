@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState("Select option");
+
+  const options = ["React", "Vue", "Angular"];
 
   return (
     <>
@@ -38,8 +42,32 @@ const Header = () => {
                   <span className="text-blue-800 font-weight-l text-lg link">Services</span>
                   <span className="nav-underline"></span>
                 </Link>
-                <Link to="/case-studies" className="nav-link">
-                  <span className="text-blue-800 font-weight-l text-lg link">Portfolio</span>
+                <Link to="/Portfolio" className="nav-link">
+                  <div className="relative w-48">
+                    <button
+                      onClick={() => setOpen(!open)}
+                      className="text-blue-800 font-weight-l text-lg link"
+                    >
+                      {selected}
+                    </button>
+
+                    {open && (
+                      <ul className="absolute w-full bg-white border mt-1 rounded shadow">
+                        {options.map((item) => (
+                          <li
+                            key={item}
+                            onClick={() => {
+                              setSelected(item);
+                              setOpen(false);
+                            }}
+                            className="p-2 hover:bg-gray-100 cursor-pointer"
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
                   <span className="nav-underline"></span>
                 </Link>
                 <Link to="/about" className="nav-link">

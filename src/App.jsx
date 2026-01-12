@@ -7,12 +7,12 @@ import { useSmoothScroll } from "./hooks";
 import { CustomCursor, PageLoader } from "./components/animations";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import CaseStudies from "./component/caseStudies/caseStudies";
 import About from "./component/About/About";
 import Contact from "./component/Contact/Contact";
 import OurTeam from "./component/ourteam/OurTeam";
 import WhatsappChat from "./component/WhatsappChat";
 import Gallery from "./component/Gallery/Gallery";
+import Portfolio from "./component/Portfolio/Portfolio";
 // import AnimatTransform from "./AnimatTransform";
 
 // Register GSAP ScrollTrigger
@@ -55,7 +55,7 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<OurTeam />} />

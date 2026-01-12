@@ -14,7 +14,7 @@ const WhatsappChat = () => {
 
       {/* Chat Button */}
       <a
-        href={`https://wa.me/${phoneNumber,name}?text=${encodeURIComponent(message)}`}
+        href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center w-14 h-14 rounded-full shadow-xl transition-all duration-300 hover:scale-110"
