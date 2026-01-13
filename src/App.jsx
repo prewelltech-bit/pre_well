@@ -1,29 +1,30 @@
 import React, { useEffect } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+
 import Header from "./Header";
 import Home from "./component/home/Home";
 import Services from "./component/services/Services";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import { useSmoothScroll } from "./hooks";
-import { CustomCursor, PageLoader } from "./components/animations";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "./component/About/About";
 import Contact from "./component/Contact/Contact";
 import OurTeam from "./component/ourteam/OurTeam";
-import WhatsappChat from "./component/WhatsappChat";
 import Gallery from "./component/Gallery/Gallery";
 import Portfolio from "./component/Portfolio/Portfolio";
-// import AnimatTransform from "./AnimatTransform";
+import BodyOfWeb from "./component/Portfolio/DropDown/WebDesignAndDevelopment/BodyOfWeb";
 
-// Register GSAP ScrollTrigger
+import WhatsappChat from "./component/WhatsappChat";
+import { useSmoothScroll } from "./hooks";
+import { PageLoader } from "./components/animations";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 
-// Component to handle ScrollTrigger refresh on route changes
+// ScrollTrigger refresh on route change
 const ScrollTriggerRefresh = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Small delay to ensure DOM is updated
     const timer = setTimeout(() => {
       ScrollTrigger.refresh();
     }, 100);
@@ -35,10 +36,8 @@ const ScrollTriggerRefresh = () => {
 };
 
 const App = () => {
-  // Enable smooth scrolling
   useSmoothScroll();
 
-  // Initial ScrollTrigger refresh
   useEffect(() => {
     const timer = setTimeout(() => {
       ScrollTrigger.refresh();
@@ -50,20 +49,30 @@ const App = () => {
   return (
     <>
       <PageLoader duration={800} />
+
       <BrowserRouter>
+        <Header /> {/* ✅ VERY IMPORTANT */}
+
         <ScrollTriggerRefresh />
+
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route
+            path="/portfolio/web-design-and-development"
+            element={<BodyOfWeb />}
+          />
+
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<OurTeam />} />
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </BrowserRouter>
+
       <WhatsappChat />
-      {/* <AnimatTransform /> */}
     </>
   );
 };

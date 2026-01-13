@@ -1,7 +1,6 @@
 import React from "react";
 import { AnimatedButton, Reveal } from "../../components/animations";
 import Vision from "./Vision";
-import { color } from "framer-motion";
 
 const AboutBody = () => {
   return (

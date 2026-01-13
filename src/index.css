@@ -55,6 +55,7 @@ button, a, [role="button"], .cursor-pointer {
   .header-top {
     padding: 1rem 2rem;
     gap: 2rem;
+    height: 70px;
   }
 }
 

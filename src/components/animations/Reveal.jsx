@@ -39,6 +39,10 @@ const Reveal = ({
   useEffect(() => {
     if (!containerRef.current) return;
 
+    // Capture current refs for cleanup
+    const currentContainer = containerRef.current;
+    const currentChildren = [...childrenRefs.current];
+
     // Small delay to ensure DOM is ready and ScrollTrigger is initialized
     const initTimer = setTimeout(() => {
       // Determine initial transform based on direction
@@ -115,11 +119,11 @@ const Reveal = ({
       clearTimeout(initTimer);
       // Cleanup ScrollTrigger instances
       ScrollTrigger.getAll().forEach((trigger) => {
-        if (trigger.vars && trigger.vars.trigger === containerRef.current) {
+        if (trigger.vars && trigger.vars.trigger === currentContainer) {
           trigger.kill();
         }
-        if (stagger && childrenRefs.current.length > 0) {
-          childrenRefs.current.forEach((child) => {
+        if (stagger && currentChildren.length > 0) {
+          currentChildren.forEach((child) => {
             if (child && trigger.vars && trigger.vars.trigger === child) {
               trigger.kill();
             }

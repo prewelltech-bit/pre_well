@@ -1,7 +1,6 @@
 import React from "react";
 
 const WhatsappChat = () => {
-  const name = "Rutvik Jani"
   const phoneNumber = "6354734061";
   const message = "Hello, I visited your website and need help.";
 
