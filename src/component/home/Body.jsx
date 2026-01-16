@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import HeroSection from "./body/HeroSection";
 import OurServices from "./body/OurServices";
 import Hero1 from "./body/Hero1";
+import Reels from "./body/Reels/Reels";
 
 // Lazy load below-the-fold components for better performance
 const Testimonials = lazy(() => import("./body/Testimonials"));
@@ -27,6 +28,7 @@ const Body = () => {
           <WhoWeServe />
           <Contact />
           <WhyChose />
+          <Reels />
         </Suspense>
     </>
   );

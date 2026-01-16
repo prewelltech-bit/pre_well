@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const portfolioRef = useRef(null);
 
   // Portfolio dropdown data
   const portfolioOptions = [
@@ -58,26 +59,50 @@ const Header = () => {
 
               {/* Portfolio Dropdown */}
               <div
-                className="nav-link relative"
-                onMouseEnter={() => !isMenuOpen && setIsDropdownOpen(true)}
-                onMouseLeave={() => !isMenuOpen && setIsDropdownOpen(false)}
+                ref={portfolioRef}
+                className="nav-link portfolio-dropdown-container"
+                onMouseEnter={() => {
+                  if (!isMenuOpen) {
+                    setIsDropdownOpen(true);
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (!isMenuOpen) {
+                    setIsDropdownOpen(false);
+                  }
+                }}
               >
-                <button
-                  type="button"
-                  onClick={() => isMenuOpen && setIsDropdownOpen(!isDropdownOpen)}
+                <Link
+                  to="/portfolio"
+                  onClick={(e) => {
+                    if (isMenuOpen) {
+                      e.preventDefault();
+                      setIsDropdownOpen(!isDropdownOpen);
+                    }
+                  }}
                   className="text-blue-800 text-lg link"
                 >
-                 <Link to="/portfolio">Portfolio</Link>
-                </button>
+                  Portfolio
+                </Link>
 
                 <span className="nav-underline"></span>
 
                 {isDropdownOpen && (
-                  <ul className="absolute w-56 bg-white border mt-10 rounded shadow z-100">
+                  <ul
+                    className="portfolio-dropdown bg-white border rounded shadow"
+                    style={{
+                      position: "fixed",
+                      left: portfolioRef.current ? portfolioRef.current.getBoundingClientRect().left : 0,
+                      top: "65px",
+                      zIndex: 100,
+                    }}
+                    onMouseEnter={() => setIsDropdownOpen(true)}
+                    onMouseLeave={() => setIsDropdownOpen(false)}
+                  >
                     {portfolioOptions.map((item, index) => (
                       <li
                         key={index}
-                        className="p-2 hover:bg-gray-100 text-blue-800 text-md cursor-pointer"
+                        className="px-4 py-3 hover:bg-blue-50 text-blue-800 text-sm cursor-pointer transition-colors duration-200"
                       >
                         <Link
                           to={item.path}
@@ -85,7 +110,7 @@ const Header = () => {
                             setIsDropdownOpen(false);
                             setIsMenuOpen(false);
                           }}
-                          className="block w-full"
+                          className="block w-full no-underline"
                         >
                           {item.name}
                         </Link>

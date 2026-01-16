@@ -5,7 +5,7 @@ import { Reveal, AnimatedButton } from '../../../components/animations';
 import './Hero1.css';
 import "./HeroSection.css";
 // Use public assets path
-// const heroBg = '/assets/images/img-cheeta.png';
+const heroBg = '/public/assets/images/programmer.jpg';
 // import heroBgTop from '../../../assets/images/freepik_talk_32743.png';
 
 const Hero1 = () => {
@@ -21,7 +21,7 @@ const Hero1 = () => {
       <div
         className="hero1 flex justify-center items-center"
         style={{
-          // backgroundImage: `url(${heroBg})`,
+          backgroundImage: `url(${heroBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

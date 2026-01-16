@@ -17,6 +17,9 @@ import { PageLoader } from "./components/animations";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BodyOfGraphic from "./component/Portfolio/DropDown/GraphicDesign/BodyOfGraphic";
+import BodyOfVideoEditing from "./component/Portfolio/DropDown/VideoEditing/BodyOfVideoEditing";
+import BodyOfDigitalMarketing from "./component/Portfolio/DropDown/DigitalMarketing/BodyOfDigitalMarketing";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,6 +66,18 @@ const App = () => {
           <Route
             path="/portfolio/web-design-and-development"
             element={<BodyOfWeb />}
+          />
+          <Route
+            path="/portfolio/graphic-design"
+            element={<BodyOfGraphic />}
+          />
+          <Route
+            path="/portfolio/video-editing"
+            element={<BodyOfVideoEditing />}
+          />
+          <Route
+            path="/portfolio/digital-marketing"
+            element={<BodyOfDigitalMarketing />}
           />
 
           <Route path="/about" element={<About />} />

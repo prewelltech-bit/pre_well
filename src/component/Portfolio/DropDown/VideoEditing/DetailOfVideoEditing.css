@@ -1,0 +1,131 @@
+/* Page title styling */
+.page-title-videoediting {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #3e93fe, #96bae6, #3e93fe);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+/* Hero section container */
+.videoediting-hero {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 80px 8%;  
+}
+
+/* Image container */
+.videoediting-hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.videoediting-hero-img img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.videoediting-hero-img img:hover {
+  transform: scale(1.05);
+}
+
+/* Text container */
+.videoediting-hero-text {
+  flex: 1;
+  max-width: 560px;
+}
+
+.videoediting-hero-text h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3e93fe, #96bae6, #3e93fe);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-desc {
+      font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+.videoediting-hero-text ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+.videoediting-hero-text ul li {
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 14px;
+  padding-left: 28px;
+  position: relative;
+}
+
+.videoediting-hero-text ul li::before {
+   content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #3e93fe;
+  font-weight: bold; 
+}
+
+/* Button styling */
+.videoediting-hero-text button {
+  padding: 14px 36px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+    background: linear-gradient(135deg, #3e93fe, #96bae6);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.videoediting-hero-text button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(62, 147, 254, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .videoediting-hero {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .videoediting-hero {
+    flex-direction: column-reverse;
+    padding: 30px 5%;
+  }
+
+  .videoediting-hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+  }
+
+  .videoediting-hero-text button {
+    width: 100%;
+    text-align: center;
+  }
+}

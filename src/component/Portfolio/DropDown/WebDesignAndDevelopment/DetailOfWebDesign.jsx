@@ -1,25 +1,40 @@
-import React from 'react'
-// import Reveal from '../../../animations/Reveal'
+import React from "react";
+import "./DetailOfWebDesign.css";
 
 const DetailOfWebDesign = () => {
   return (
-    
     <>
-      <div className="detail-of-web-design">
-        <h2>Web Design & Development</h2>
-        <p>Our team of experts creates stunning websites and applications tailored to your business needs.</p>
-      </div><section className="services-section">
-            <div className="services-container px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-24 mx-auto">
-      
-              {/* Header */}
-              {/* <Reveal direction="up" className="services-header">
-              </Reveal> */}
-                <h2>Our Services</h2>
-                <p>Smart strategies. Creative design. Powerful technology.</p>
-            </div>
-          </section>
-    </>
-  )
-}
+      <h1 className="page-title-web">Web Design & Development</h1>
+      <section className="web-hero">
+        <div className="web-hero-image">
+          <img
+            src="/assets/portfolio/13.jpg"
+            alt="web design and development"
+          />
+        </div>
+        <div className="web-hero-content">
+          <h1>Prewell Web Designer & Developer</h1>
+          <p className="hero-desc-web">
+            At PreWell, we specialize in crafting stunning and functional
+            websites that not only captivate your audience but also drive
+            business growth. Our team of expert web designers and developers
+            work collaboratively to create custom web solutions tailored to your
+            unique needs. From responsive design to seamless user experiences,
+            we ensure your website stands out in the digital landscape.
+          </p>
 
-export default DetailOfWebDesign
+          <ul>
+            <li>Custom website design and development</li>
+            <li>Mobile-friendly and responsive layouts</li>
+            <li>Fast loading and performance optimized</li>
+            <li>SEO-friendly structure</li>
+          </ul>
+
+          <button>Start Your Project</button>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default DetailOfWebDesign;

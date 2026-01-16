@@ -122,6 +122,7 @@ button, a, [role="button"], .cursor-pointer {
   animation: headerSlideIn 0.45s cubic-bezier(0.2, 0.9, 0.3, 1);
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  overflow: visible;
 }
 .search-container:focus-within {
   background: rgba(255, 255, 255, 0.25);
@@ -274,10 +275,12 @@ button, a, [role="button"], .cursor-pointer {
 /* Navigation Wrapper */
 .nav-wrapper {
   max-height: 0;
-  overflow: hidden;
+  overflow: visible;
   transition: max-height 0.4s cubic-bezier(0.2, 0.9, 0.3, 1);
   background: linear-gradient(135deg , #ffffff, #3e93fe);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 50;
 }
 
 .nav-wrapper.open {
@@ -374,6 +377,52 @@ button, a, [role="button"], .cursor-pointer {
   padding: 0.75rem 0;
   transition: color 0.3s ease;
   display: inline-block;
+}
+
+/* Portfolio Dropdown Container */
+.portfolio-dropdown-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Hover bridge - keeps dropdown open when moving mouse */
+.portfolio-dropdown-container::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 20px;
+  pointer-events: auto;
+}
+
+/* Portfolio Dropdown Menu */
+.portfolio-dropdown {
+  min-width: 240px;
+  position: fixed;
+  top: 65px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-top: 3px solid #2e75cd;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.portfolio-dropdown li {
+  list-style: none;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.portfolio-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.portfolio-dropdown li a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
 }
 
 /* .nav-link:hover {
